@@ -3,6 +3,47 @@
     padding: 0;
     box-sizing: border-box;
 }
+a{
+    text-decoration: none;
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
 .wrap{
     max-width: 1140px;
+    margin: 0 auto;
+}
+.contact{
+    background-color: #f6f6f6;
+    padding: 50px auto;
+}
+.contact-group{
+    display: flex;
+    justify-content: flex-end;  
+}
+.contact-group li{
+    list-style-type: none;
+    font-size: 20px;
+}
+.contact-group li a{
+    display: block;
+    padding: 10px;
+}
+.contact-group li a img{
+    margin-right: 3px;
+}
+.header{
+    margin-bottom: 50px;
+}
+.navbar-logo h1 a{
+    text-indent: 101%;
+    overflow: hidden;
+    white-space: nowrap;
+    background-image: url(./images/logo.png);
+    display: block;
+    width: 170px;
+    height: 36px;
+    background-position: center;
+    background-size: cover;
 }
