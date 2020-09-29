@@ -6,14 +6,18 @@
 a{
     text-decoration: none;
 }
+li{
+    list-style-type: none;
+}
 img{
     max-width: 100%;
     height: auto;
 }
 .wrap{
-    max-width: 1140px;
+    max-width: 1000px;
     margin: 0 auto;
 }
+/* Contact */
 .contact{
     background-color: #f6f6f6;
     padding: 50px auto;
@@ -22,28 +26,134 @@ img{
     display: flex;
     justify-content: flex-end;  
 }
-.contact-group li{
-    list-style-type: none;
-    font-size: 20px;
-}
 .contact-group li a{
     display: block;
     padding: 10px;
+    font-size: 20px;
 }
 .contact-group li a img{
     margin-right: 3px;
 }
-.header{
-    margin-bottom: 50px;
+/* Header */
+.navbar{
+    height: 80px;
+    box-shadow: 3px 5px 5px rgba(0,0,0,0.3);
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 .navbar-logo h1 a{
+    /* 圖片取代掉文字 */
     text-indent: 101%;
     overflow: hidden;
     white-space: nowrap;
+
     background-image: url(./images/logo.png);
     display: block;
     width: 170px;
     height: 36px;
-    background-position: center;
-    background-size: cover;
+    margin-left: 10px;
 }
+.navbar-main{
+    display: flex;
+}
+.navbar-main li a{
+    text-align: center;
+    padding: 10px 20px;
+    display: block;
+    color: #333;
+    border-bottom: 3px solid transparent;
+    font-size: 20px;
+}
+.navbar-main li a:hover {
+    border-bottom: 3px solid #00cc99;
+    color: #00cc99;
+    transition: 0.3s;
+}
+/* Content */
+.content{
+  
+}
+.card-group{
+    display: flex;
+    justify-content: space-between;
+    
+}
+.card{
+    width: 30%;
+    height: 380px;
+    box-shadow: 1px 3px 5px rgba(0,0,0,0.5);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 30px;
+    transition: 0.3s;
+}
+.card:hover{
+    box-shadow: 1px 3px 5px #00cc99;
+}
+.card img{
+   margin-bottom: 10px;
+   
+}
+.card h2{
+    text-align: center;
+    margin-bottom: 10px;
+  
+}
+.card h3{
+    font-weight: 500;
+    text-indent: -30px;
+}
+.card p{
+    text-align: justify;
+    /* 文字左右對齊本文 */
+    letter-spacing: 1.2px;
+    line-height: 1.5;
+}
+.card-rwd li{
+    list-style: disc;
+    /* 增加小黑點 */
+    line-height: 1.5;
+    letter-spacing: 1.5px;
+    text-indent: 20px;
+}
+@media (max-width:768px){
+    .navbar{
+        flex-direction: column;
+        justify-self: center;
+        margin-top: 10px;
+        height: auto;
+        box-shadow: none;
+    }
+    .navbar-logo h1 a{
+        margin-right: 10px;
+    }
+    .navbar-main{
+        flex-wrap: wrap;
+    }
+    .navbar-main li {
+        width: 50%;
+    }
+    .navbar-main li a:hover{
+        border-bottom: none;
+    }
+    .card-group{
+        flex-direction: column;
+    }
+    .card{
+        width: 90%;
+        transition: none;
+        margin: 10px auto;
+        box-shadow: 1px 3px 5px rgba(0,0,0,0.5);
+
+    }
+    .card:hover{
+        box-shadow: 1px 3px 5px rgba(0,0,0,0.5);
+    }
+    .card p{
+        width: 85%;
+    }
+}  
