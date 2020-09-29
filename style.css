@@ -72,9 +72,6 @@ img{
     transition: 0.3s;
 }
 /* Content */
-.content{
-  
-}
 .card-group{
     display: flex;
     justify-content: space-between;
